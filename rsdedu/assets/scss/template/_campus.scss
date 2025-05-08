@@ -1,0 +1,176 @@
+/*-------------------
+  Campus Styles
+---------------------*/
+@keyframes hero-shape-anim-2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-9px);
+  }
+}
+.campus-thumbnail {
+  .thumbnail {
+    img {
+      border-radius: 5px;
+      top: 170px;
+      position: relative;
+
+      @media #{$smlg-device} {
+        width: 100%;
+        top: 50px;
+      }
+    }
+  }
+}
+.campus-content {
+  box-shadow: var(--shadow-darker);
+  border-radius: 0 5px 5px 5px;
+  padding: 60px 50px 60px 70px;
+  background-color: var(--color-white);
+  margin-left: -120px;
+  margin-top: 90px;
+  @media #{$smlg-device} {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .features-box {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    text-align: left;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .icon {
+      font-size: 48px;
+      margin-right: 20px;
+      margin-bottom: 0;
+      .fitness-icon {
+        font-size: 32px;
+      }
+    }
+    @media only screen and (max-width: 495px) {
+      .icon {
+        font-size: 35px;
+      }
+    }
+    .content {
+      flex: 1;
+      .title {
+        margin-bottom: 12px;
+        margin-top: 3rem;
+      }
+      @media only screen and (max-width: 495px) {
+        .title {
+          font-size: small;
+        }
+      }
+      p {
+        color: var(--color-body);
+      }
+    }
+  }
+}
+
+.edu-campus-area {
+  position: relative;
+  .campus-image-gallery {
+    position: relative;
+    .shape-1 {
+      z-index: -1;
+      bottom: -220px;
+      left: -235px;
+      span {
+        display: block;
+        height: 470px;
+        width: 470px;
+        border: 1px solid var(--color-border);
+        border-radius: 50%;
+      }
+    }
+    .shape-2 {
+      bottom: -84px;
+      left: -144px;
+    }
+    .shape-3 {
+      bottom: -118px;
+      left: -85px;
+    }
+  }
+  .campus-content {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
+      background: linear-gradient(235deg, #1ab69d, #060c21, #00bcd4);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -5px;
+      bottom: -5px;
+      left: -5px;
+      right: -5px;
+      background: linear-gradient(235deg, #1ab69d, #060c21, #00bcd4);
+      z-index: -2;
+      filter: blur(50px);
+    }
+    .shape-4 {
+      z-index: -1;
+      top: -140px;
+      right: -158px;
+      span {
+        display: block;
+        height: 320px;
+        width: 320px;
+        border: 1px solid var(--color-border);
+        border-radius: 50%;
+      }
+    }
+    .shape-5 {
+      top: -33px;
+      right: -64px;
+      span {
+        display: block;
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        background: #f3f8fa;
+      }
+    }
+    .shape-6 {
+      top: 347px;
+      right: -28px;
+      z-index: 0;
+      width: 42%;
+      animation: hero-shape-anim-2 1s infinite alternate;
+    }
+    @media only screen and (max-width: 1199px) {
+      .shape-6 {
+        top: 345px;
+        right: -31px;
+        width: 24%;
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      .shape-6 {
+        top: 354px;
+        width: 35%;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      .shape-6 {
+        top: 480px;
+      }
+    }
+  }
+}
